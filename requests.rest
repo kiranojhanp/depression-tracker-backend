@@ -1,0 +1,28 @@
+@hostname = http://localhost
+@port = 5000
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+
+// Users and auth
+// Route that have to deal with managing user and authentication
+
+### Registration
+POST {{host}}/api/users/register
+Content-Type: {{contentType}} 
+
+{
+   "name": "Kamal Ojha",
+   "email": "kamal@test.com",
+   "password": "123456"
+}
+
+### Login
+POST {{host}}/api/users/login
+Content-Type: {{contentType}} 
+
+{
+   "email": "kamal@test.com",
+   "password": "123456"
+}
+
+
